@@ -1,0 +1,20 @@
+<list>
+    <option name="CSV_TEST_NAVIGATOR_PROCESS">
+        <value>
+            <option name="FOREGROUND" value="067d17"/>
+            <option name="FONT_TYPE" value="1"/>
+        </value>
+    </option>
+    <option name="CSV_TEST_NAVIGATOR_DATA">
+        <value>
+            <option name="FOREGROUND" value="0033b3"/>
+            <option name="FONT_TYPE" value="1"/>
+        </value>
+    </option>
+    <option name="CSV_TEST_NAVIGATOR_UNRESOLVED">
+        <value>
+            <option name="FOREGROUND" value="d50000"/>
+            <option name="FONT_TYPE" value="1"/>
+        </value>
+    </option>
+</list>

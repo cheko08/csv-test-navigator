@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CsvTestNavigator">
+    <option name="mappings" value="process* = ../config/ProcessDetails.csv&#10;data* = ../testData/**/{process*}.csv" />
+  </component>
+</project>

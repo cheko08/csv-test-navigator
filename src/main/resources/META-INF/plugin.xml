@@ -1,0 +1,36 @@
+<idea-plugin>
+    <id>dev.csvnav.csv-test-navigator</id>
+    <name>CSV Test Navigator</name>
+    <vendor>csvnav</vendor>
+
+    <description><![CDATA[
+    Navigate from test-case CSV files to the files they reference.
+    <ul>
+      <li>Ctrl+Click (Cmd+Click on macOS) or Ctrl+B on a cell under a mapped column
+          (for example <code>process</code> or <code>data</code>) opens the file with that name
+          or row the column is mapped to (e.g. the process's row in ProcessDetails.csv, or the data row in
+          the CSV named after the process).</li>
+      <li>Process names are highlighted green and data names blue
+          (<b>Settings | Editor | Color Scheme | CSV Test Navigator</b>).</li>
+      <li>Configure column-to-folder mappings in <b>Settings | Tools | CSV Test Navigator</b>.</li>
+    </ul>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <gotoDeclarationHandler implementation="dev.csvnav.CsvGotoDeclarationHandler"/>
+        <highlightingPassFactory implementation="dev.csvnav.CsvHighlightingPassFactory"/>
+        <colorSettingsPage implementation="dev.csvnav.CsvNavColorSettingsPage"/>
+        <additionalTextAttributes scheme="Default" file="colorSchemes/CsvNavDefault.xml"/>
+        <additionalTextAttributes scheme="Darcula" file="colorSchemes/CsvNavDarcula.xml"/>
+        <additionalTextAttributes scheme="Dark" file="colorSchemes/CsvNavDarcula.xml"/>
+        <additionalTextAttributes scheme="Islands Dark" file="colorSchemes/CsvNavDarcula.xml"/>
+        <additionalTextAttributes scheme="Islands Light" file="colorSchemes/CsvNavDefault.xml"/>
+        <additionalTextAttributes scheme="High contrast" file="colorSchemes/CsvNavDarcula.xml"/>
+        <projectConfigurable parentId="tools"
+                             instance="dev.csvnav.CsvNavConfigurable"
+                             id="dev.csvnav.settings"
+                             displayName="CSV Test Navigator"/>
+    </extensions>
+</idea-plugin>

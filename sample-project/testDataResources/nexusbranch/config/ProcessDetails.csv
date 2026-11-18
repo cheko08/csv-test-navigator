@@ -1,0 +1,4 @@
+name,description,owner
+Login,Open login page and enter credentials,qa
+Logout,Click the logout button,qa
+PlaceOrder,Add item to cart and check out,shop
